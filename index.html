@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account & Data Deletion | VanTrack Official Portal</title>
+  <meta name="description" content="Official account and personal data deletion portal for the VanTrack mobile application. Request erasure under Google Play Store policy and India DPDP Act 2023.">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Google Fonts: Outfit & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="container header-container">
+      <div class="brand">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="1" y="3" width="15" height="13" rx="2"></rect>
+            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+            <circle cx="5.5" cy="18.5" r="2.5"></circle>
+            <circle cx="18.5" cy="18.5" r="2.5"></circle>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">VanTrack</span>
+          <span class="brand-badge">Safety & Compliance</span>
+        </div>
+      </div>
+      <div class="header-status">
+        <span class="status-indicator"></span>
+        <span class="status-label">Google Play Verified & DPDP 2023 Compliant</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="hero-section">
+      <div class="container hero-container">
+        <div class="hero-tag">Official User Right to Erasure Portal</div>
+        <h1 class="hero-title">Account & Personal Data Deletion Request</h1>
+        <p class="hero-subtitle">
+          VanTrack prioritizes your family's safety and data sovereignty. In accordance with the 
+          <strong>Google Play User Data & Account Deletion Policy</strong> and <strong>Section 12 of India's Digital Personal Data Protection (DPDP) Act, 2023</strong>, 
+          you have the absolute right to permanently delete your account and erase all associated personal records.
+        </p>
+      </div>
+    </section>
+
+    <!-- Content Grid -->
+    <div class="container main-content-grid">
+      
+      <!-- Left Column: Options & Instructions -->
+      <div class="info-column">
+        
+        <!-- Method 1: Instant In-App Deletion -->
+        <article class="card highlight-card" id="in-app-instructions">
+          <div class="card-header">
+            <div class="card-icon in-app-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+              </svg>
+            </div>
+            <div>
+              <span class="step-badge">Method 1 (Instant)</span>
+              <h2 class="card-title">Delete Directly Inside the VanTrack App</h2>
+            </div>
+          </div>
+          <p class="card-description">
+            If you have the VanTrack mobile application installed, you can permanently erase your account in seconds without waiting for manual verification:
+          </p>
+
+          <!-- Role Selector Tabs -->
+          <div class="tabs-nav" role="tablist">
+            <button class="tab-btn active" id="tab-parent" data-target="guide-parent" role="tab">Parents</button>
+            <button class="tab-btn" id="tab-driver" data-target="guide-driver" role="tab">Drivers</button>
+            <button class="tab-btn" id="tab-owner" data-target="guide-owner" role="tab">Fleet Owners</button>
+          </div>
+
+          <!-- Guide Contents -->
+          <div class="guide-content active" id="guide-parent">
+            <ol class="step-list">
+              <li>Open the <strong>VanTrack</strong> mobile application on your device.</li>
+              <li>Navigate to the <strong>Profile</strong> tab from the bottom navigation bar.</li>
+              <li>Scroll down to the <strong>Privacy & Account Actions</strong> section.</li>
+              <li>Tap on <strong>Delete Account & Data</strong> (highlighted in red).</li>
+              <li>Review the statutory erasure summary and tap <strong>DELETE PERMANENTLY</strong>. All student linkages, credentials, and telemetry are erased instantly.</li>
+            </ol>
+          </div>
+
+          <div class="guide-content" id="guide-driver">
+            <ol class="step-list">
+              <li>Open the <strong>VanTrack Driver App</strong>.</li>
+              <li>From the top-right menu or dashboard header, tap on <strong>Account Settings</strong>.</li>
+              <li>Scroll to the <strong>Privacy & 30-Day Purge Policy</strong> section.</li>
+              <li>Select <strong>Delete Account</strong> and confirm the prompt. Your driver license credentials, route linkages, and live telemetry stop and purge immediately.</li>
+            </ol>
+          </div>
+
+          <div class="guide-content" id="guide-owner">
+            <ol class="step-list">
+              <li>Open the <strong>VanTrack Fleet Portal</strong> app.</li>
+              <li>Open your <strong>Fleet Profile & Settings</strong>.</li>
+              <li>Scroll to the <strong>Privacy & Account Actions</strong> card.</li>
+              <li>Tap <strong>Delete Account & Records</strong> and confirm. Fleet roster associations, invitations, and company data will be permanently wiped.</li>
+            </ol>
+          </div>
+        </article>
+
+        <!-- Data Deletion Scope Details -->
+        <article class="card" id="data-scope-card">
+          <h2 class="card-title">What Data Is Permanently Erased?</h2>
+          <p class="card-description">When an account deletion takes effect, our automated PostgreSQL cascade purge erases all records linked to your user identity:</p>
+          
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Data Category</th>
+                  <th>Action Taken</th>
+                  <th>Retention Timeline</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Profile & Identity</strong> (Name, Phone, Email, Role)</td>
+                  <td><span class="badge badge-purge">Permanent Erasure</span></td>
+                  <td>Immediate (0 days)</td>
+                </tr>
+                <tr>
+                  <td><strong>Student & Child Data</strong> (Name, School, Roster)</td>
+                  <td><span class="badge badge-purge">Permanent Erasure</span></td>
+                  <td>Immediate (0 days)</td>
+                </tr>
+                <tr>
+                  <td><strong>GPS Telemetry & Route History</strong></td>
+                  <td><span class="badge badge-purge">Hard Purged</span></td>
+                  <td>Immediate (Max 30 days during active use)</td>
+                </tr>
+                <tr>
+                  <td><strong>FCM Device Push Notification Tokens</strong></td>
+                  <td><span class="badge badge-purge">Revoked & Deleted</span></td>
+                  <td>Immediate</td>
+                </tr>
+                <tr>
+                  <td><strong>Auth Schema Credentials & Sessions</strong></td>
+                  <td><span class="badge badge-purge">Destroyed</span></td>
+                  <td>Immediate</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="alert-box">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+            <div>
+              <strong>Zero Hidden Retention:</strong> VanTrack does not sell personal data, does not retain behavioral tracking logs of minors, and does not retain shadow records once your account is deleted.
+            </div>
+          </div>
+        </article>
+
+        <!-- DPDP & Statutory Grievance -->
+        <article class="card" id="grievance-card">
+          <h2 class="card-title">Statutory Grievance Redressal (India DPDP Act)</h2>
+          <p class="card-description">If you have any queries or face any issues executing your Right to Erasure, our designated statutory Grievance Officers are available under the Information Technology Rules, 2021 & DPDP Act, 2023:</p>
+          <div class="contact-grid">
+            <div class="contact-box">
+              <span class="contact-role">Primary Grievance Officer</span>
+              <span class="contact-value"><a href="mailto:grievance@vantrack.in">grievance@vantrack.in</a></span>
+              <span class="contact-sla">24h Acknowledgment &bull; 15-day resolution</span>
+            </div>
+            <div class="contact-box">
+              <span class="contact-role">Data Protection Operations</span>
+              <span class="contact-value"><a href="mailto:hostelhome@gmail.com">hostelhome@gmail.com</a></span>
+              <span class="contact-sla">Direct Statutory Escalation</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Right Column: Web Deletion Request Form -->
+      <div class="form-column">
+        <article class="card form-card" id="web-request-card">
+          <div class="card-header">
+            <div class="card-icon web-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+                <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                <polyline points="7 3 7 8 15 8"></polyline>
+              </svg>
+            </div>
+            <div>
+              <span class="step-badge">Method 2 (Web Form)</span>
+              <h2 class="card-title">Submit Web Deletion Request</h2>
+            </div>
+          </div>
+          <p class="card-description">
+            Do not have the app installed? Fill out this web request form. Our administrative team will verify your registered credentials and purge all personal records within 48 hours.
+          </p>
+
+          <form id="deletion-form" novalidate>
+            <!-- User Role Selection -->
+            <div class="form-group">
+              <label for="user-role" class="form-label">Your Account Type <span class="required">*</span></label>
+              <select id="user-role" class="form-control" required>
+                <option value="" disabled selected>Select your account role</option>
+                <option value="Parent / Guardian">Parent / Guardian</option>
+                <option value="School Van Driver">School Van Driver</option>
+                <option value="Fleet / Van Owner">Fleet / Van Owner</option>
+              </select>
+            </div>
+
+            <!-- Full Name -->
+            <div class="form-group">
+              <label for="user-name" class="form-label">Full Name <span class="required">*</span></label>
+              <input type="text" id="user-name" class="form-control" placeholder="Enter your full registered name" required>
+            </div>
+
+            <!-- Registered Phone Number -->
+            <div class="form-group">
+              <label for="user-phone" class="form-label">Registered Mobile Number <span class="required">*</span></label>
+              <div class="input-with-prefix">
+                <span class="prefix">+91</span>
+                <input type="tel" id="user-phone" class="form-control" placeholder="10-digit mobile number" pattern="[0-9]{10}" required>
+              </div>
+              <span class="form-hint">The phone number associated with your VanTrack account.</span>
+            </div>
+
+            <!-- Registered Email -->
+            <div class="form-group">
+              <label for="user-email" class="form-label">Registered Email Address (Optional)</label>
+              <input type="email" id="user-email" class="form-control" placeholder="name@example.com">
+            </div>
+
+            <!-- Reason for Deletion -->
+            <div class="form-group">
+              <label for="deletion-reason" class="form-label">Reason for Deletion (Optional)</label>
+              <select id="deletion-reason" class="form-control">
+                <option value="No longer using school van services">No longer using school van services</option>
+                <option value="Child graduated or changed school">Child graduated or changed school</option>
+                <option value="Privacy / Data concerns">Privacy / Data concerns</option>
+                <option value="Driver / Owner changed fleet">Driver / Owner changed fleet</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <!-- Confirmation Checkbox -->
+            <div class="form-checkbox-group">
+              <input type="checkbox" id="confirm-deletion" class="form-checkbox" required>
+              <label for="confirm-deletion" class="checkbox-label">
+                I understand that this action is <strong>irreversible</strong> and will permanently wipe all profile information, student links, and vehicle associations.
+              </label>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" id="submit-btn" class="btn btn-delete">
+              <span class="btn-text">Submit Deletion Request</span>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+          </form>
+
+          <div class="google-policy-footer">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+            </svg>
+            <span>Complies with Google Play App Content Data Safety standards.</span>
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Submission Confirmation Modal -->
+  <div class="modal-backdrop" id="confirmation-modal" aria-hidden="true" role="dialog">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-icon-success">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </div>
+        <h3 class="modal-title">Deletion Request Prepared</h3>
+      </div>
+      <div class="modal-body">
+        <p>Your official request has been generated with Reference ID:</p>
+        <div class="ticket-id-badge" id="modal-ticket-id">VT-DEL-000000</div>
+        
+        <div class="modal-details" id="modal-summary-content">
+          <!-- Populated by script.js -->
+        </div>
+
+        <p class="modal-instructions">
+          To complete your verified identity check, tap the button below to dispatch this pre-filled request directly to our Data Protection & Grievance desk.
+        </p>
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-secondary" id="modal-copy-btn">Copy Details</button>
+        <a href="#" class="btn btn-primary" id="modal-email-btn">Dispatch via Email</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <p>&copy; 2026 VanTrack Inc. All rights reserved.</p>
+        <p class="footer-note">VanTrack: School Van Fleet Telemetry, Parent Safety & Transit Management.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#in-app-instructions">In-App Deletion</a>
+        <a href="#data-scope-card">Data Scope</a>
+        <a href="mailto:grievance@vantrack.in">Grievance Desk</a>
+        <a href="mailto:support@vantrack.in">Support</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
