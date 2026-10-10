@@ -15,7 +15,7 @@ This repository contains the **official standalone web portal** for VanTrack, bu
 
 ```
 VanTrack-Web/
-├── index.html            # Official Account & Personal Data Deletion Portal
+├── account_deletion.html # Official Account & Personal Data Deletion Portal
 ├── privacy_policy.html   # Official Privacy Policy (DPDP Act 2023, GPS Telemetry & Child Safety)
 ├── terms_conditions.html # Official Terms & Conditions of Service (DPDP Act 2023 & IT Rules 2021)
 ├── styles.css            # Responsive design system with prominent cross-navigation buttons
@@ -40,7 +40,7 @@ Verify which files were modified and created:
 ```powershell
 git status
 ```
-*You will see `index.html`, `styles.css`, `README.md` under modified files, and `privacy_policy.html`, `terms_conditions.html` under untracked files.*
+*You will see `account_deletion.html`, `styles.css`, `README.md` under modified files, and `privacy_policy.html`, `terms_conditions.html` under untracked files.*
 
 ### Step 3: Stage All Changes
 Add all modified and new files to git staging:
@@ -70,7 +70,7 @@ Once pushed, your three compliance pages will be live at:
 
 | Page | Path / URL | Purpose |
 | :--- | :--- | :--- |
-| **Account Deletion** | `https://vantrack.pages.dev/index.html` (or `/`) | Google Play Account Deletion URL |
+| **Account Deletion** | `https://vantrack.pages.dev/account_deletion.html` | Google Play Account Deletion URL |
 | **Privacy Policy** | `https://vantrack.pages.dev/privacy_policy.html` | Google Play App Content & Privacy Policy URL |
 | **Terms & Conditions** | `https://vantrack.pages.dev/terms_conditions.html` | Statutory Terms of Service |
 
@@ -97,7 +97,7 @@ Once pushed, your three compliance pages will be live at:
    - Select **"Yes, the app provides a link for users to request account deletion"**.
    - Paste your deletion URL:
      ```
-     https://<your-domain>/index.html
+     https://<your-domain>/account_deletion.html
      ```
    - Check the box confirming users can delete their accounts directly from inside the app (`Profile -> Settings -> Delete Account`).
 3. Click **Next** &rarr; **Save**.
