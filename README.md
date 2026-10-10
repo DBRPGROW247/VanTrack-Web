@@ -1,53 +1,103 @@
-# VanTrack — Google Play Account & Data Deletion Web Portal
+# VanTrack — Legal & Compliance Web Portal
 
-This folder contains the **official standalone web portal** for VanTrack account and personal data deletion, built specifically to satisfy:
-1. **Google Play Store Policy:** Mandatory Account Deletion & User Data Deletion URL.
-2. **India DPDP Act 2023 (Section 12):** Statutory Right to Correction and Erasure.
+This repository contains the **official standalone web portal** for VanTrack, built specifically to satisfy:
+1. **Google Play Store Policies:**
+   - Mandatory **Privacy Policy URL** (Data Safety & User Privacy).
+   - Mandatory **Account & Personal Data Deletion URL**.
+2. **India Statutory Compliance:**
+   - **Digital Personal Data Protection (DPDP) Act, 2023** (Sections 5, 6, 9, 11 & 12).
+   - **Information Technology Rules, 2021** (Grievance Redressal Mechanism).
+   - **Survey of India & National Geospatial Policy, 2022** (Civilian telemetry & boundary depiction).
 
 ---
 
 ## 📁 File Structure
 
 ```
-account_deletion_web/
-├── index.html     # Semantic, mobile-responsive webpage with in-app guides & web form
-├── styles.css     # Clean modern design system matching VanTrack branding
-├── script.js      # Form validation, unique ticket generation, clipboard & email actions
-└── README.md      # Deployment and Play Console submission guide
+VanTrack-Web/
+├── index.html            # Official Account & Personal Data Deletion Portal
+├── privacy_policy.html   # Official Privacy Policy (DPDP Act 2023, GPS Telemetry & Child Safety)
+├── terms_conditions.html # Official Terms & Conditions of Service (DPDP Act 2023 & IT Rules 2021)
+├── styles.css            # Responsive design system with prominent cross-navigation buttons
+├── script.js             # Form validation, unique ticket generation, clipboard & email dispatch
+└── README.md             # Git push guide, deployment, and Play Console compliance
 ```
 
 ---
 
-## 🚀 How to Deploy / Host This Website
+## 🚀 Easy Step-by-Step Guide: Pushing Changes to GitHub
 
-Google Play Console requires this page to be **publicly accessible without login or payment**. You can host these static files for free using any of the following services:
+To push the new Privacy Policy, Terms & Conditions, and updated responsive navigation buttons to your live repository (`DBRPGROW247/VanTrack-Web`), follow these simple steps:
 
-### Option A: GitHub Pages (Fastest & Free)
-1. In your GitHub repository, create a branch (e.g. `gh-pages`) or go to **Settings > Pages**.
-2. Select the directory (`/account_deletion_web` or a custom subfolder).
-3. Your live URL will look like:
-   `https://<your-username>.github.io/<repo-name>/account_deletion_web/`
+### Step 1: Open Terminal in the Web Folder
+Open **PowerShell** or **Command Prompt** and navigate to this folder:
+```powershell
+cd c:\Praj\DBRP\Application\VanTrack\VanTrack\account_deletion_web
+```
 
-### Option B: Vercel / Netlify / Cloudflare Pages (Free)
-1. Drag and drop the `account_deletion_web` folder into [Vercel](https://vercel.com) or [Netlify Drop](https://app.netlify.com/drop).
-2. It assigns an instant public HTTPS URL, e.g.:
-   `https://vantrack-delete-account.vercel.app`
+### Step 2: Check Status
+Verify which files were modified and created:
+```powershell
+git status
+```
+*You will see `index.html`, `styles.css`, `README.md` under modified files, and `privacy_policy.html`, `terms_conditions.html` under untracked files.*
 
-### Option C: Custom Domain
-Point your domain path:
-`https://vantrack.app/delete-account`
+### Step 3: Stage All Changes
+Add all modified and new files to git staging:
+```powershell
+git add .
+```
+
+### Step 4: Commit the Changes
+Create a clear commit message:
+```powershell
+git commit -m "Add Privacy Policy, Terms & Conditions, and cross-page navigation buttons"
+```
+
+### Step 5: Push to GitHub
+Push your commit to the `main` branch on GitHub:
+```powershell
+git push origin main
+```
+
+*(If you are hosting via Cloudflare Pages or GitHub Pages, your live website updates automatically within 30–60 seconds of pushing!)*
 
 ---
 
-## 📱 Submitting in Google Play Console
+## 🌐 Live Webpage URLs
 
-1. Log into your [Google Play Console](https://play.google.com/console).
-2. Select your app **VanTrack** (`com.vantrack.app`).
-3. Under **Policy and programs** in the left sidebar, click **App Content**.
-4. Locate the **Data Safety** form.
-5. In the **Account Deletion** section:
+Once pushed, your three compliance pages will be live at:
+
+| Page | Path / URL | Purpose |
+| :--- | :--- | :--- |
+| **Account Deletion** | `https://vantrack.pages.dev/index.html` (or `/`) | Google Play Account Deletion URL |
+| **Privacy Policy** | `https://vantrack.pages.dev/privacy_policy.html` | Google Play App Content & Privacy Policy URL |
+| **Terms & Conditions** | `https://vantrack.pages.dev/terms_conditions.html` | Statutory Terms of Service |
+
+*(Note: Replace `vantrack.pages.dev` with your custom domain or Cloudflare/GitHub Pages URL if different).*
+
+---
+
+## 📱 Submitting URLs in Google Play Console
+
+### 1. Privacy Policy Submission
+1. Go to [Google Play Console](https://play.google.com/console) &rarr; select **VanTrack**.
+2. In the left menu, scroll down to **Policy and programs** &rarr; click **App content**.
+3. Under **Privacy Policy**, click **Manage** / **Start**.
+4. Paste your live Privacy Policy URL:
+   ```
+   https://<your-domain>/privacy_policy.html
+   ```
+5. Click **Save**.
+
+### 2. Account & Data Deletion URL Submission
+1. In **App content**, locate **Data safety** &rarr; click **Manage**.
+2. In the **Account Deletion** section:
    - Select **"Yes, users can create an account in the app"**.
-   - Check **"Yes, the app provides a link for users to request account deletion"**.
-   - Paste your hosted deletion URL (e.g., `https://vantrack.app/delete-account`).
-   - Check the box confirming users can delete their accounts from within the app as well.
-6. Save and submit your update for review.
+   - Select **"Yes, the app provides a link for users to request account deletion"**.
+   - Paste your deletion URL:
+     ```
+     https://<your-domain>/index.html
+     ```
+   - Check the box confirming users can delete their accounts directly from inside the app (`Profile -> Settings -> Delete Account`).
+3. Click **Next** &rarr; **Save**.
