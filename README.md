@@ -15,11 +15,16 @@ This repository contains the **official standalone web portal** for VanTrack, bu
 
 ```
 VanTrack-Web/
+├── index.html            # Root redirector & safety portal entry point
 ├── account_deletion.html # Official Account & Personal Data Deletion Portal
-├── privacy_policy.html   # Official Privacy Policy (DPDP Act 2023, GPS Telemetry & Child Safety)
-├── terms_conditions.html # Official Terms & Conditions of Service (DPDP Act 2023 & IT Rules 2021)
+├── privacy_policy.html   # Official Privacy Policy (Dynamic Supabase Storage loader + fallback)
+├── terms_conditions.html # Official Terms & Conditions (Dynamic Supabase Storage loader + fallback)
+├── policy-loader.js      # Client-side dynamic loader with cache-busting & TOC auto-sync
 ├── styles.css            # Responsive design system with prominent cross-navigation buttons
 ├── script.js             # Form validation, unique ticket generation, clipboard & email dispatch
+├── supabase_storage/     # Ready-to-upload content files for your Supabase 'legal-docs' bucket
+│   ├── privacy-policy.html
+│   └── terms-conditions.html
 └── README.md             # Git push guide, deployment, and Play Console compliance
 ```
 
@@ -64,6 +69,21 @@ git push origin main
 
 ---
 
+## 🗄️ Setting Up Supabase Storage Bucket (`legal-docs`)
+
+To enable instant updates to your Privacy Policy and Terms without git pushes:
+
+1. Open your **[Supabase Dashboard](https://supabase.com/dashboard)** &rarr; select project `dmcyyjhzrppiurazvdrz`.
+2. Go to **Storage** in the left sidebar &rarr; click **New Bucket**.
+3. Set **Bucket Name**: `legal-docs`
+4. **IMPORTANT**: Toggle **Public Bucket** to **ON** (Public read access is required so website visitors can fetch policy text).
+5. Open the `legal-docs` bucket &rarr; click **Upload File** &rarr; upload:
+   - `supabase_storage/privacy-policy.html`
+   - `supabase_storage/terms-conditions.html`
+
+*Whenever you need to update any clause in the future, simply re-upload or edit the file in this bucket — the website will immediately reflect the changes!*
+
+---
 ## 🌐 Live Webpage URLs
 
 Once pushed, your three compliance pages will be live at:

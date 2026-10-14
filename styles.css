@@ -1716,6 +1716,60 @@ body {
   }
 }
 
+/* Live Cloud Storage Sync Indicator */
+.sync-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  margin-right: 6px;
+  vertical-align: middle;
+  animation: pulse-dot 2s infinite ease-in-out;
+}
+
+.sync-live {
+  border-color: rgba(16, 185, 129, 0.4) !important;
+  color: #065F46 !important;
+  background: rgba(16, 185, 129, 0.1) !important;
+}
+
+.sync-live .sync-dot {
+  background-color: #10B981 !important;
+  box-shadow: 0 0 6px rgba(16, 185, 129, 0.7);
+}
+
+.sync-fallback {
+  border-color: rgba(59, 130, 246, 0.3) !important;
+  color: #1E40AF !important;
+  background: rgba(59, 130, 246, 0.08) !important;
+}
+
+.sync-fallback .sync-dot {
+  background-color: #3B82F6 !important;
+}
+
+@keyframes pulse-dot {
+  0%, 100% {
+    transform: scale(0.9);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.25);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .legal-meta-bar {
+    gap: 8px;
+  }
+  .meta-pill {
+    font-size: 11px;
+    padding: 4px 10px;
+  }
+}
+
 /* Print Friendly Styles */
 @media print {
   .site-header,

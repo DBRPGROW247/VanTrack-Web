@@ -80,7 +80,10 @@
           Statutory Agreement
         </span>
         <span class="meta-pill">Last Updated: October 2026</span>
-        <span class="meta-pill meta-pill-accent">Version 2.4 (Active)</span>
+        <span class="meta-pill meta-pill-accent sync-pending" id="doc-sync-pill" title="Checking Supabase Storage...">
+          <span class="sync-dot"></span>
+          <span id="doc-sync-text">Cloud Sync: Checking</span>
+        </span>
         <span class="meta-pill">Jurisdiction: Pune, India</span>
       </div>
 
@@ -201,7 +204,7 @@
       </aside>
 
       <!-- Main Legal Articles -->
-      <div class="legal-content">
+      <div class="legal-content" id="legal-content-container">
 
         <!-- Clause 1 -->
         <article class="legal-section" id="sec-1">
@@ -637,56 +640,16 @@
     </div>
   </footer>
 
-  <!-- Interactive Script for TOC Scrollspy, Search & Back-to-Top -->
+  <!-- Dynamic Supabase Storage Policy Loader -->
+  <script src="policy-loader.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      // 1. Table of Contents Search Filter
-      const filterInput = document.getElementById('toc-filter');
-      const tocLinks = document.querySelectorAll('.toc-nav li');
-
-      if (filterInput) {
-        filterInput.addEventListener('input', (e) => {
-          const query = e.target.value.toLowerCase().trim();
-          tocLinks.forEach(item => {
-            const text = item.textContent.toLowerCase();
-            item.style.display = text.includes(query) ? '' : 'none';
-          });
-        });
-      }
-
-      // 2. Active Section ScrollSpy
-      const sections = document.querySelectorAll('.legal-section');
-      const navLinks = document.querySelectorAll('.toc-link');
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const id = entry.target.getAttribute('id');
-            navLinks.forEach(link => {
-              link.classList.toggle('active', link.getAttribute('href') === '#' + id);
-            });
-          }
-        });
-      }, {
-        rootMargin: '-80px 0px -70% 0px',
-        threshold: 0
-      });
-
-      sections.forEach(sec => observer.observe(sec));
-
-      // 3. Floating Back to Top Button
-      const backToTopBtn = document.getElementById('back-to-top');
-      window.addEventListener('scroll', () => {
-        if (window.scrollY > 400) {
-          backToTopBtn.classList.add('visible');
-        } else {
-          backToTopBtn.classList.remove('visible');
-        }
-      });
-
-      backToTopBtn.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
+    VanTrackPolicyLoader.init({
+      fileName: 'terms-conditions.html',
+      contentContainerId: 'legal-content-container',
+      tocListId: 'toc-list',
+      tocFilterId: 'toc-filter',
+      syncPillId: 'doc-sync-pill',
+      syncTextId: 'doc-sync-text'
     });
   </script>
 </body>
